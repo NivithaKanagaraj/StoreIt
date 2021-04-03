@@ -10,15 +10,16 @@ app.post('/upload',function(req, res) {
     return res.status(200).send(req.file)
 
   });
-
-  app.use(express.static('task_react/build'));
+  if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('task_react/build'));
     app.get(' * ', (req,res) =>{
         res.sendFile(path.join(__dirname, 'task_react/build' , 'index.html'));
     });
+  }
 
+  const port = process.env.PORT || 8000;
+  server.listen(port, function() {
 
-server.listen(8000, function() {
-
-  console.log('App running on port 8000');
+  console.log(`Server is running on port ${port}` );
 
 });
