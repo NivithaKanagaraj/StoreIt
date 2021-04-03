@@ -4,7 +4,7 @@ var cors = require('cors');
 app.use(cors())
 const http = require("http");
 const server = http.createServer(app);
-app.post('http://localhost:8000/upload',function(req, res) {
+app.post('/upload',function(req, res) {
      
 
     return res.status(200).send(req.file)
