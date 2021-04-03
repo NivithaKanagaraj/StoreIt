@@ -80,7 +80,7 @@ class ShareFile extends React.Component{
                             filename: filename,
                         });
 
-                    axios.post(`http://localhost:8000/upload`,formData,options).then(res=>{
+                    axios.post(`https://store--it.herokuapp.com/upload`,formData,options).then(res=>{
                         //data.delete('file')
                         console.log(res);
                     this.setState({
