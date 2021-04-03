@@ -1,0 +1,15 @@
+.navbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .navbar-brand{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bg-dark{
+    background-color: transparent!important;
+  }
